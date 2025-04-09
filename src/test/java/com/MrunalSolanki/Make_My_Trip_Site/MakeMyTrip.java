@@ -1,4 +1,4 @@
-package com.MrunalSolanki.Oepn_Browser;
+package com.MrunalSolanki.Make_My_Trip_Site;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;
