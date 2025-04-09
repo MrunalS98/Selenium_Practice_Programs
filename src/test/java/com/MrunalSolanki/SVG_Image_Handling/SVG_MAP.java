@@ -1,11 +1,15 @@
 package com.MrunalSolanki.SVG_Image_Handling;
 
 import io.qameta.allure.Description;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 import static com.MrunalSolanki.Wait_Helper.TestSelenium_WaitHelpers.waitJVM;
 
@@ -16,11 +20,9 @@ public class SVG_MAP {
     public void OpenBrowser(){
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.addArguments("---as a guest");
-        firefoxOptions.addArguments("start-maximized");
 
         driver = new FirefoxDriver();
-        driver.navigate().to("");
-        System.out.println(driver.getTitle());
+        driver.manage().window().maximize();
     }
 
     @Test
@@ -32,7 +34,13 @@ public class SVG_MAP {
         driver.manage().window().maximize();
 
         waitJVM(3000);
-
+        List<WebElement> states = driver.findElements(By.xpath("//*[name()='svg']/*[name()='g'][7]/*[name()='g']/*[name()='g']/*[name()='path']"));
+        for (WebElement state: states) {
+            System.out.println(state.getDomAttribute("aria-label"));
+            if (state.getDomAttribute("aria-label").contains("Tripura")) {
+                state.click();
+            }
+        }
     }
 
     @AfterTest
