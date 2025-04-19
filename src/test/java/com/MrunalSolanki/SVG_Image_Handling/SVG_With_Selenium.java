@@ -28,7 +28,7 @@ public class SVG_With_Selenium {
     }
 
     @Test
-    @Description("Testing on SVG image with selenium")
+    @Description("Testing on SVG image with selenium for Flipkart")
     public void test_svg_icon_flipkart_search(){
 
         String URL = "https://www.flipkart.com/search";

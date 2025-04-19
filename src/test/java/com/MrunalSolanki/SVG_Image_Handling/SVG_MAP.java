@@ -26,7 +26,7 @@ public class SVG_MAP {
     }
 
     @Test
-    @Description("Testing on SVG image with selenium")
+    @Description("Testing on SVG image with selenium for MAP")
     public void test_svg_icon_flipkart_search(){
 
         String URL = "https://www.amcharts.com/svg-maps/?map=india";
@@ -37,7 +37,7 @@ public class SVG_MAP {
         List<WebElement> states = driver.findElements(By.xpath("//*[name()='svg']/*[name()='g'][7]/*[name()='g']/*[name()='g']/*[name()='path']"));
         for (WebElement state: states) {
             System.out.println(state.getDomAttribute("aria-label"));
-            if (state.getDomAttribute("aria-label").contains("Tripura")) {
+            if (state.getDomAttribute("aria-label").contains("Maharashtra  ")) {
                 state.click();
             }
         }
