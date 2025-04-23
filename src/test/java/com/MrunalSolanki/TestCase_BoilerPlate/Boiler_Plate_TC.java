@@ -19,11 +19,11 @@ public class Boiler_Plate_TC {
 
     @AfterTest
     public void close_browser(){
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        //driver.quit();
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+        driver.quit();
     }
 }
