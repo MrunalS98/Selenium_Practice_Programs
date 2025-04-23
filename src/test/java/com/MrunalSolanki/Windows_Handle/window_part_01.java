@@ -33,6 +33,7 @@ public class window_part_01 extends Boiler_Plate_TC {
             if(driver.getPageSource().contains("New Window")){
                 System.out.println("Test Case Passed!");
             }
+            //switch to parent window again
             driver.switchTo().window(parent);
         }
     }
