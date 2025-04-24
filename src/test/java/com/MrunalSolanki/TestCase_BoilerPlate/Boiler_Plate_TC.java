@@ -15,6 +15,7 @@ public class Boiler_Plate_TC {
         //firefoxOptions.addArguments("start-maximized");
 
         driver = new FirefoxDriver(firefoxOptions);
+        System.out.println("Browser is Open");
     }
 
     @AfterTest
@@ -25,5 +26,6 @@ public class Boiler_Plate_TC {
 //            throw new RuntimeException(e);
 //        }
         driver.quit();
+        System.out.println("Browser is Closed");
     }
 }

@@ -32,6 +32,8 @@ public class RL_Prog_03 extends Boiler_Plate_TC {
             String aqi = driver.findElement(with(By.tagName("span")).toRightOf(location)).getText();
             System.out.println("| +" + rank + " | " + location.getText() + " | " + aqi + " | ");
 
+            //https://www.selenium.dev/documentation/webdriver/elements/locators/
+            //More information on RL
         }
         }
 }
