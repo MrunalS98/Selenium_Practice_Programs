@@ -1,4 +1,4 @@
-package JavaScript_User;
+package com.MrunalSolanki.JavaScript_User;
 
 import com.MrunalSolanki.TestCase_BoilerPlate.Boiler_Plate_TC;
 import io.qameta.allure.Description;
